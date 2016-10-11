@@ -107,8 +107,12 @@ var bio = {
         var bioImg = HTMLbioPic.replace("%data%", this.biopic);
         var welcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
 
-        $("#header").append(bioImg, welcomeMsg);
+        $("#header").append(bioImg, welcomeMsg, HTMLskillsStart);
 
+        this.skills.forEach(function(skill) {
+            var skillHTML = HTMLskills.replace("%data%", skill);
+            $("#skills").append(skillHTML);
+        });
     }
 };
 
