@@ -91,23 +91,23 @@ var bio = {
         "iOS", "Web", "Data analysis", "Flying"
     ],
     display: function() {
-      var headerName = HTMLheaderName.replace("%data%", this.name);
-      var headerRole = HTMLheaderRole.replace("%data%", this.role);
+        var headerName = HTMLheaderName.replace("%data%", this.name);
+        var headerRole = HTMLheaderRole.replace("%data%", this.role);
 
-      $("#header").prepend(headerName, headerRole);
+        $("#header").prepend(headerName, headerRole);
 
-      var mobile = HTMLmobile.replace("%data%", this.contacts.mobile);
-      var email = HTMLemail.replace("%data%", this.contacts.email);
-      var twitter = HTMLtwitter.replace("%data%", this.contacts.twitter);
-      var github = HTMLgithub.replace("%data%", this.contacts.github);
-      var location = HTMLlocation.replace("%data%", this.contacts.location);
+        var mobile = HTMLmobile.replace("%data%", this.contacts.mobile);
+        var email = HTMLemail.replace("%data%", this.contacts.email);
+        var twitter = HTMLtwitter.replace("%data%", this.contacts.twitter);
+        var github = HTMLgithub.replace("%data%", this.contacts.github);
+        var location = HTMLlocation.replace("%data%", this.contacts.location);
 
-      $("#topContacts").append(mobile, email, twitter, github, location);
+        $("#topContacts").append(mobile, email, twitter, github, location);
 
-      var bioImg = HTMLbioPic.replace("%data%", this.biopic);
-      var welcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
+        var bioImg = HTMLbioPic.replace("%data%", this.biopic);
+        var welcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
 
-      $("#header").append(bioImg, welcomeMsg);
+        $("#header").append(bioImg, welcomeMsg);
 
     }
 };
