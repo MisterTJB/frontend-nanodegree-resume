@@ -1,5 +1,3 @@
-"use strict";
-
 var work = {
     jobs: [{
         employer: "VicLink / Ryan Achten",
@@ -81,7 +79,7 @@ var bio = {
     name: "Timothy J.",
     role: "Developer",
     welcomeMessage: "Go away.",
-    biopic: "/images/fry.jpg",
+    biopic: "images/fry.jpg",
     contacts: {
         mobile: "123-456",
         email: "tim@tim.com",
@@ -93,7 +91,24 @@ var bio = {
         "iOS", "Web", "Data analysis", "Flying"
     ],
     display: function() {
-        return 0;
+      var headerName = HTMLheaderName.replace("%data%", this.name);
+      var headerRole = HTMLheaderRole.replace("%data%", this.role);
+
+      $("#header").prepend(headerName, headerRole);
+
+      var mobile = HTMLmobile.replace("%data%", this.contacts.mobile);
+      var email = HTMLemail.replace("%data%", this.contacts.email);
+      var twitter = HTMLtwitter.replace("%data%", this.contacts.twitter);
+      var github = HTMLgithub.replace("%data%", this.contacts.github);
+      var location = HTMLlocation.replace("%data%", this.contacts.location);
+
+      $("#topContacts").append(mobile, email, twitter, github, location);
+
+      var bioImg = HTMLbioPic.replace("%data%", this.biopic);
+      var welcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
+
+      $("#header").append(bioImg, welcomeMsg);
+
     }
 };
 
