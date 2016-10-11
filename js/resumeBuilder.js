@@ -128,6 +128,7 @@ var bio = {
         var location = HTMLlocation.replace("%data%", this.contacts.location);
 
         $("#topContacts").append(mobile, email, twitter, github, location);
+        $("#footerContacts").append(mobile, email, twitter, github, location);
 
         var bioImg = HTMLbioPic.replace("%data%", this.biopic);
         var welcomeMsg = HTMLwelcomeMsg.replace("%data%", this.welcomeMessage);
@@ -216,3 +217,9 @@ var education = {
         });
     }
 };
+
+bio.display();
+work.display();
+projects.display();
+education.display();
+$("#mapDiv").append(googleMap);
