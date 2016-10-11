@@ -189,6 +189,30 @@ var education = {
         url: "www.udacity.com"
     }],
     display: function() {
-        return 0;
+
+        this.schools.forEach(function(school) {
+            $("#education").append(HTMLschoolStart);
+
+            var nameDegree = HTMLschoolName.replace("%data%", school.name) + HTMLschoolDegree.replace("%data%", school.degree);
+            var dates = HTMLschoolDates.replace("%data%", school.dates);
+            var location = HTMLschoolLocation.replace("%data%", school.dates);
+            $(".education-entry:last").append(nameDegree, dates, location);
+
+            school.majors.forEach(function(major) {
+                var major = HTMLschoolMajor.replace("%data%", major);
+                $(".education-entry:last").append(major);
+            });
+        });
+
+        $("#education").append(HTMLonlineClasses);
+
+        this.onlineCourses.forEach(function(course) {
+            $("#education").append(HTMLschoolStart);
+            var titleSchool = HTMLonlineTitle.replace("%data%", course.title) + HTMLonlineSchool.replace("%data%", course.school);
+            var date = HTMLonlineDates.replace("%data%", course.dates);
+            var url = HTMLonlineURL.replace("%data%", course.url);
+            $(".education-entry:last").append(titleSchool, date, url);
+
+        });
     }
 };
