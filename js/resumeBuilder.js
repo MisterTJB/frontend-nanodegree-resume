@@ -37,7 +37,18 @@ var work = {
         description: "dslgksladg lsdjglasngd lkdgalsdkgj"
     }],
     display: function() {
-        return 0;
+
+        this.jobs.forEach(function(job) {
+            var workEntry = HTMLworkStart;
+            var position = HTMLworkEmployer.replace("%data%", job.employer) + HTMLworkTitle.replace("%data%", job.title);
+            var dates = HTMLworkDates.replace("%data%", job.dates);
+            var location = HTMLworkLocation.replace("%data%", job.location);
+            var description = HTMLworkDescription.replace("%data%", job.description);
+
+            $("#workExperience").append(workEntry);
+            $(".work-entry:last").append(position, dates, location, description);
+
+        });
     }
 };
 
