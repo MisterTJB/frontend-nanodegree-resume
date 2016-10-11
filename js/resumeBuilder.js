@@ -1,40 +1,16 @@
 var work = {
     jobs: [{
-        employer: "VicLink / Ryan Achten",
-        title: "yyy",
-        location: "zzz",
-        dates: "###-###",
-        description: "dslgksladg lsdjglasngd lkdgalsdkgj"
+        employer: "My Current Employer",
+        title: "My Current Title",
+        location: "Barotseland",
+        dates: "2000–",
+        description: "Doing things for money"
     }, {
-        employer: "Victoria University of Wellington",
-        title: "yyy",
-        location: "zzz",
-        dates: "###-###",
-        description: "dslgksladg lsdjglasngd lkdgalsdkgj"
-    }, {
-        employer: "Victoria University of Wellington",
-        title: "yyy",
-        location: "zzz",
-        dates: "###-###",
-        description: "dslgksladg lsdjglasngd lkdgalsdkgj"
-    }, {
-        employer: "National Archive of Film Television and Sound",
-        title: "yyy",
-        location: "zzz",
-        dates: "###-###",
-        description: "dslgksladg lsdjglasngd lkdgalsdkgj"
-    }, {
-        employer: "The British Library",
-        title: "yyy",
-        location: "zzz",
-        dates: "###-###",
-        description: "dslgksladg lsdjglasngd lkdgalsdkgj"
-    }, {
-        employer: "Radio New Zealand Sound Archives",
-        title: "yyy",
-        location: "zzz",
-        dates: "###-###",
-        description: "dslgksladg lsdjglasngd lkdgalsdkgj"
+        employer: "My Past Employer",
+        title: "My Past Title",
+        location: "Sealand",
+        dates: "1990–1999",
+        description: "Doing things I didn't like for money that wasn't good enough"
     }],
     display: function() {
 
@@ -54,30 +30,15 @@ var work = {
 
 var projects = {
     projects: [{
-        title: "xxx",
-        dates: "###-###",
-        description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["images/fry.jpg", "images/fry.jpg"]
+        title: "A Recent Project",
+        dates: "2016",
+        description: "This is something I've been doing recently",
+        images: ["https://unsplash.it/200?random", "https://unsplash.it/201/300?random"]
     }, {
-        title: "xxx",
-        dates: "###-###",
-        description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["images/fry.jpg", "images/fry.jpg"]
-    }, {
-        title: "xxx",
-        dates: "###-###",
-        description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["images/fry.jpg", "images/fry.jpg"]
-    }, {
-        title: "xxx",
-        dates: "###-###",
-        description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["images/fry.jpg", "images/fry.jpg"]
-    }, {
-        title: "xxx",
-        dates: "###-###",
-        description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["images/fry.jpg", "images/fry.jpg"]
+        title: "A Not So Recent Project",
+        dates: "2015",
+        description: "This is something I gave up on",
+        images: ["https://unsplash.it/199?random", "https://unsplash.it/202?random"]
     }],
     display: function() {
 
@@ -101,19 +62,19 @@ var projects = {
 
 
 var bio = {
-    name: "Timothy J.",
-    role: "Developer",
-    welcomeMessage: "Go away.",
-    biopic: "images/fry.jpg",
+    name: "Hugh Man",
+    role: "Decapodian Army Officer",
+    welcomeMessage: "Now that's a name I can trust!",
+    biopic: "images/hughman.jpg",
     contacts: {
-        mobile: "123-456",
-        email: "tim@tim.com",
-        github: "MisterTJB",
-        twitter: "@MisterTJB",
-        location: "Wellington"
+        mobile: "123-456-7890",
+        email: "hugh@decapodianarmy.com",
+        github: "Nope",
+        twitter: "@Nope",
+        location: "New York"
     },
     skills: [
-        "iOS", "Web", "Data analysis", "Flying"
+        "An impressive skill", "An unimpressive skill"
     ],
     display: function() {
         var headerName = HTMLheaderName.replace("%data%", this.name);
@@ -144,50 +105,36 @@ var bio = {
 
 var education = {
     schools: [{
-        name: "Victoria University of Wellington",
-        location: "Wellington",
-        degree: "XYZ",
+        name: "Mars University",
+        location: "Oxford, England",
+        degree: "Ph.D",
         dates: "2015-2016",
-        url: "www.victoria.ac.nz",
-        majors: ["Computer Science"]
+        url: "www.oxford.ac.uk",
+        majors: ["Mechanics of Wonton Burrito Meals"]
     }, {
-        name: "University of Canterbury",
-        location: "Wellington",
-        degree: "XYZ",
+        name: "Bovine University",
+        location: "Antarctica",
+        degree: "BSc.",
         dates: "2010-2014",
         url: "www.canterbury.ac.nz",
         majors: ["Computer Science", "Mathematics"]
-    }, {
-        name: "Victoria University of Wellington",
-        location: "Wellington",
-        degree: "XYZ",
-        dates: "2008-2010",
-        url: "www.victoria.ac.nz",
-        majors: ["Information Studies"]
-    }, {
-        name: "Tai Poutini Polytechnic",
-        location: "Christchurch",
-        degree: "XYZ",
-        dates: "2004-2005",
-        url: "www.mainz.ac.nz",
-        majors: ["Audio Engineering"]
     }],
 
     onlineCourses: [{
         title: "Front-end Web Developer Nanodegree",
         school: "Udacity",
         dates: "2016",
-        url: "www.udacity.com"
+        url: "https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001"
     }, {
         title: "iOS Developer Nanodegree",
         school: "Udacity",
         dates: "2015-2016",
-        url: "www.udacity.com"
+        url: "https://www.udacity.com/course/ios-developer-nanodegree--nd003"
     }, {
         title: "Data Analyst Developer Nanodegree",
         school: "Udacity",
         dates: "2015-2016",
-        url: "www.udacity.com"
+        url: "https://www.udacity.com/course/data-analyst-nanodegree--nd002"
     }],
     display: function() {
 
