@@ -39,13 +39,12 @@ var work = {
     display: function() {
 
         this.jobs.forEach(function(job) {
-            var workEntry = HTMLworkStart;
             var position = HTMLworkEmployer.replace("%data%", job.employer) + HTMLworkTitle.replace("%data%", job.title);
             var dates = HTMLworkDates.replace("%data%", job.dates);
             var location = HTMLworkLocation.replace("%data%", job.location);
             var description = HTMLworkDescription.replace("%data%", job.description);
 
-            $("#workExperience").append(workEntry);
+            $("#workExperience").append(HTMLworkStart);
             $(".work-entry:last").append(position, dates, location, description);
 
         });
@@ -58,30 +57,45 @@ var projects = {
         title: "xxx",
         dates: "###-###",
         description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["/path/to/image", "path/to/image_2"]
+        images: ["images/fry.jpg", "images/fry.jpg"]
     }, {
         title: "xxx",
         dates: "###-###",
         description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["/path/to/image", "path/to/image_2"]
+        images: ["images/fry.jpg", "images/fry.jpg"]
     }, {
         title: "xxx",
         dates: "###-###",
         description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["/path/to/image", "path/to/image_2"]
+        images: ["images/fry.jpg", "images/fry.jpg"]
     }, {
         title: "xxx",
         dates: "###-###",
         description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["/path/to/image", "path/to/image_2"]
+        images: ["images/fry.jpg", "images/fry.jpg"]
     }, {
         title: "xxx",
         dates: "###-###",
         description: "sdlkshdg sdlgjsdgljk sdlgjksdg",
-        images: ["/path/to/image", "path/to/image_2"]
+        images: ["images/fry.jpg", "images/fry.jpg"]
     }],
     display: function() {
-        return 0;
+
+        this.projects.forEach(function(project) {
+            $("#projects").append(HTMLprojectStart);
+
+            var title = HTMLprojectTitle.replace("%data%", project.title);
+            var dates = HTMLprojectDates.replace("%data%", project.dates);
+            var description = HTMLprojectDescription.replace("%data%", project.description);
+
+            $(".project-entry:last").append(title, dates, description);
+
+            project.images.forEach(function(image) {
+                var imageElement = HTMLprojectImage.replace("%data%", image);
+                $(".project-entry:last").append(imageElement);
+            });
+
+        });
     }
 };
 
