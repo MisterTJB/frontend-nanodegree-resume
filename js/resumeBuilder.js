@@ -64,7 +64,7 @@ var projects = {
 var bio = {
     name: "Hugh Man",
     role: "Decapodian Army Officer",
-    welcomeMessage: "Now that's a name I can trust!",
+    welcomeMessage: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non sollicitudin odio, at finibus metus. Donec iaculis, mi a consequat sagittis, turpis ligula bibendum leo, vel venenatis nisl dolor maximus augue. Aenean vitae leo sed massa sodales sodales in eget lorem. Vestibulum tempus blandit odio, rhoncus faucibus turpis ornare sed. Nunc vel ullamcorper nibh. Curabitur augue nulla, eleifend in accumsan sed, feugiat nec tortor",
     biopic: "images/hughman.jpg",
     contacts: {
         mobile: "123-456-7890",
